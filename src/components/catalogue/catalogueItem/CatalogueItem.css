@@ -1,15 +1,17 @@
 .catalogueItem{
     margin: 2% ;
+    border: thin solid grey;
+    padding: 1em;
+    width: 20%;
 }
 
-.catalogueItem img{
+.catalogueItemImage{
     width: 100%;
-    max-width: 200px;
-    height:300px;
     object-fit: cover;
 }
 
-.catalogueItem p{
+.catalogueItemName{
+    padding-top: 0.5em;
     font-family: 'Dancing Script', cursive;
     font-size: 2em;
     text-align: center;
