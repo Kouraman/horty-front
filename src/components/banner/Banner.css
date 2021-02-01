@@ -1,0 +1,33 @@
+.banner{
+    margin-top: -10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    height: 500px;
+    display: block;
+
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(255,255,255,1)), url('banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.banner p{
+    font-size: 500%;
+    color:#e6d29e;
+    margin:0;
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.bannerTitle{
+    padding-top: 5%;
+    text-align: center;
+}
+
+.bannerMotto{
+    padding-top: 7% ;
+    padding-right: 5%;
+    text-align: right;
+}

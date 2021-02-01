@@ -1,0 +1,64 @@
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-nav li{
+    display: block;
+    margin-left: 3%;
+    margin-right: 3%;
+
+
+    /*border-left: solid;*/
+    /*border-right: solid;*/
+}
+
+/*.navbar-nav li:hover{*/
+
+/*    color: black;*/
+/*    text-decoration-color: black;*/
+/*}*/
+
+.nav-link{
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    /*background: black;*/
+
+    text-decoration: none;
+    color: grey;
+    transition: all 0.5s ease;
+}
+
+/*.nav-link:after{*/
+/*    color: black;*/
+/*}*/
+
+/*.nav-link:hover:after{*/
+/*    transition: all 1s;*/
+/*}*/
+
+/*.nav-link::after {*/
+/*    transition: all 0.4s ;*/
+/*    color: blue;*/
+/*}*/
+
+/*.nav-link:hover::after {*/
+/*    color: black;*/
+/*}*/
+
+.nav-link:hover{
+    color: black;
+    background: rgb(163,160,161);
+    background: radial-gradient(closest-side, rgba(163,160,161,1) 0%, rgba(255,255,255,1) 100%);
+    transition: all 0.2s ;
+}
+
+.nav-link:hover::after{
+    background: blue;
+}

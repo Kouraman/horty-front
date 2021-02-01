@@ -1,0 +1,16 @@
+.catalogueItem{
+    margin: 2% ;
+}
+
+.catalogueItem img{
+    width: 100%;
+    max-width: 200px;
+    height:300px;
+    object-fit: cover;
+}
+
+.catalogueItem p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    text-align: center;
+}

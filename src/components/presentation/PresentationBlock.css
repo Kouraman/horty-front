@@ -1,0 +1,63 @@
+.wrap{
+    display: flex;
+    /*background: blue;*/
+    /*align-items: center;*/
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+.content {
+
+    width: 70%;
+    background: #E6D29E;
+
+    /*background: linear-gradient(to bottom right, rgba(2,0,36,1) 0%, #E6D29E 25%, #E6D29E 100%);*/
+    border: 18px inset #1C6EA4;
+}
+
+.notInverted{
+    border-radius: 40px 0px 0px 40px;
+    margin-right: 5%;
+}
+
+.inverted {
+    margin-left: 5%;
+    border-radius: 0px 40px 40px 0px;
+}
+.content img{
+    background: rgb(2,0,36);
+    background: linear-gradient(to bottom right, rgba(2,0,36,1) 0%, rgba(158,158,158,0.5) 13%, rgba(230,210,158,1) 100%);
+    width: 100%;
+    max-width: 200px;
+    height:auto;
+
+}
+
+.inverted img{
+
+    float:right;
+    margin:-1px 0px 0px 10px;
+    border-radius: 0px 20px 0px 0px;
+}
+
+.notInverted img{
+
+    float:left;
+    margin: 0px 10px 0px 0px;
+    border-radius: 20px 0px 0px 0px;
+}
+
+
+.content p {
+    horiz-align: center;
+    text-align: justify;
+    text-indent: 5%;
+}
+
+.inverted p{
+    margin:5px 10px 0px 5px;
+}
+
+.notInverted p{
+    margin: 5px 5px 10px 10px;
+}

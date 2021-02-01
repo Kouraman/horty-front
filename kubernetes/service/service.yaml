@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: horty-front
+  name: front-service
+  namespace: bbhorty
+spec:
+  type: NodePort
+  selector:
+    app: horty-front
+  ports:
+    - nodePort: 30877
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+
