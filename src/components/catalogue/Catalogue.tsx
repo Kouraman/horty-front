@@ -105,6 +105,7 @@ export default class Catalogue extends React.Component<any,State> {
         this.setState({
             history:this.state.history.concat([this.state.apiUrl]),
             data:[],
+            isLoaded:false,
             navTree:this.state.navTree.concat([childData.name+"/"]),
             apiUrl: childData.pathName
         },async () => {
@@ -129,6 +130,7 @@ export default class Catalogue extends React.Component<any,State> {
                 history:this.state.history,
                 data:[],
                 apiUrl: url,
+                isLoaded:false,
                 isCatalogueItem:true, //On return, it's every time a catalog item
                 navTree:this.state.navTree,
 
