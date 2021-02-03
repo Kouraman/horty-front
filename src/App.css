@@ -37,6 +37,15 @@
   }
 }
 
+.flex{
+  display: flex;
+}
+
+.flexHoriz{
+  display: flex;
+  flex-direction: column;
+}
+
 .display{
   display: block;
 }

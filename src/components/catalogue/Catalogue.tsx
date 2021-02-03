@@ -2,15 +2,42 @@ import React from "react";
 import axios from "axios";
 import CatalogueItem from "../catalogue/catalogueItem/CatalogueItem";
 import './Catalogue.css';
-import returnImg from './return.svg'
+import returnImg from './return.png'
 import NavTree from "./NavTree";
+import PlantItem from "./catalogueItem/PlantItem";
 
+export interface imageApiData{
+    id:number,
+    srcImg:string,
+}
+export interface adviceApiData{
+    id:number,
+    name:string,
+    advice:string,
+}
+
+export interface treatmentApiData{
+    id:number,
+    name:string,
+    treatment:string,
+}
+
+export interface priceApiData{
+    id:number,
+    name:string,
+    price:number,
+    quantity:number
+}
 
 export interface apiDataPlant {
     id: number,
     name: string,
-    srcImg: string,
+    description:string,
+    img: imageApiData[],
     pathName: string,
+    prices: priceApiData[],
+    advices: adviceApiData[],
+    treatments: treatmentApiData[],
     parentCallback?:any,
 }
 
@@ -50,8 +77,11 @@ export default class Catalogue extends React.Component<any,State> {
     async componentDidMount() {
         axios.get(this.state.apiUrl)
             .then(res => {
-                this.setState({data:res.data, isLoaded:true})
-
+                this.state.isCatalogueItem?(
+                    this.setState({data :res.data as apiDataCatalogue[], isLoaded:true})
+                ):(
+                    this.setState({data :[res.data] as apiDataPlant[], isLoaded:true})
+                )
             })
             .catch(function (error) {
                 // handle error
@@ -78,7 +108,6 @@ export default class Catalogue extends React.Component<any,State> {
             navTree:this.state.navTree.concat([childData.name+"/"]),
             apiUrl: childData.pathName
         },async () => {
-            console.log(this.state.navTree)
             await this.checkItemNature()
             await this.componentDidMount()
         })
@@ -127,14 +156,23 @@ export default class Catalogue extends React.Component<any,State> {
 
         return (
             <div className="">
-                <img className={"catalogueReturn " + this.hideReturn()} src={returnImg} alt="" onClick={this.returnEvent.bind(this)}/>
-                <NavTree tree={this.state.navTree} parentCallback = {this.handleCallbackNav}/>
+                <div className={"catalogueNavigation"}>
+                    <img className={"catalogueReturn " + this.hideReturn()} src={returnImg} alt="" onClick={this.returnEvent.bind(this)}/>
+                    <NavTree tree={this.state.navTree} parentCallback = {this.handleCallbackNav}/>
+                </div>
                 <div className="catalogue">
                     {
-                        this.state.data.map( (elem,x) => {
-                            return (<CatalogueItem id={elem.id} name={elem.name} srcImg={elem.srcImg} pathName={elem.pathName} key={x} parentCallback = {this.handleCallback}/>)
-                        })
+                        this.state.isCatalogueItem?
+                            (
+                                this.state.data as apiDataCatalogue[]).map( (elem,x) => {
+                                    return (<CatalogueItem id={elem.id} name={elem.name} srcImg={elem.srcImg} pathName={elem.pathName} key={"catalogueItem"+x} parentCallback = {this.handleCallback}/>)
+                                }
+                            ):(
+                                this.state.data as apiDataPlant[]).map( (elem,x) => {
+                                    return (<PlantItem data={elem} key={x}/>)
+                            })
                     }
+
                 </div>
             </div>
             );

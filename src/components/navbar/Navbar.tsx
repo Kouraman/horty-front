@@ -21,7 +21,7 @@ function NavBar({}) {
                 </nav>
                 <hr />
                 <Switch>
-                    <Route exact path='/' component={Home} />
+                    <Route exact path='/'  render={() => <Home key={Math.random()}/>} />
                     <Route path='/contact' component={Contact} />
                     <Route path='/about' component={About} />
                     <Route component={NotFound} />

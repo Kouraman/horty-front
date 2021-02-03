@@ -1,0 +1,112 @@
+.PlantItem{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3em;
+    font-family: Roboto;
+}
+
+.PlantItemImage{
+    transform: translateX(-10%);
+    width: 50%;
+}
+
+.PlantItemImageContent{
+    display: block;
+    box-shadow: 0 0 20px #343434;
+    border-radius: 50%;
+    width: 90%;
+}
+
+.PlantItemImageSwipeRight{
+    transform: translateX(100%);
+}
+.PlantItemImageSwipeRight:hover{
+    transition: all 0.2s ;
+    opacity: 70%;
+}
+
+.PlantItemImageSwipeLeft{
+    transform: translateX(-100%);
+}
+.PlantItemImageSwipeLeft:hover{
+    transition: all 0.2s ;
+    opacity: 70%;
+}
+.PlantItemImageSwipe{
+    opacity : 0;
+    width: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor:pointer;
+}
+
+.PlantItemProductSheet{
+    flex: 2 1 auto;
+}
+
+.plantTitlePrices{
+    justify-content: space-around;
+    padding-top: 3%;
+
+}
+
+.PlantItemPrices{
+    font-size: 1.8em;
+    color:#6b79db;
+    font-weight: bold;
+    border: thin solid darkgray;
+    border-radius: 10%;
+    padding: 2%;
+}
+
+.PlantItemName{
+    font-size: 3.5em;
+    font-style: italic;
+    font-weight: bolder;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 5%;
+}
+
+
+
+.PlantItemDescription{
+    padding-top: 5%;
+    padding-left: 5%;
+    align-items: flex-start;
+}
+
+.PlantItemDescription h4{
+    margin-bottom: 0.5em;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 2em;
+    margin-top: 3%;
+    padding-left: 10%;
+}
+
+.PlantItemDescription p{
+    text-indent: 1.5em;
+    font-size: 1.5em;
+    padding-left: 1%;
+}
+
+.PlantOtherDescription{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.PlantOtherDescription h5{
+    padding-left: 3%;
+    margin-top: 1em;
+    margin-bottom: 0;
+    font-size: 2.5em;
+}
+
+.PlantOtherDescription li{
+    font-size: 1.2em;
+}

@@ -29,9 +29,8 @@ export default class NavTree extends React.Component<navTreeData,navTreeData> {
             <div className={"navTree"}>
                 {
                     this.state.tree.map( (elem:string,index:number) => {
-                        console.log(index)
                         return (
-                            <a href={elem} onClick={(event: React.MouseEvent<HTMLElement>) => this.handleClick(event,index)}>{elem} </a>
+                            <a href={elem} key={"navTreeItem"+index} onClick={(event: React.MouseEvent<HTMLElement>) => this.handleClick(event,index)}>{elem} </a>
                             // <NavTreeItem name={elem.name} linkApiUrl={elem.linkApiUrl} parentCallback={this.handleCallback.bind(this)}/>
                         )
                     })

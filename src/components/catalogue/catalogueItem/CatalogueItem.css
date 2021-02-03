@@ -1,4 +1,5 @@
 .catalogueItem{
+    cursor: pointer;
     margin: 2% ;
     border: thin solid grey;
     padding: 1em;

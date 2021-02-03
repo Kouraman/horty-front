@@ -23,15 +23,26 @@ export default class CatalogueItem extends React.Component<apiDataCatalogue,apiD
     }
 
     onTrigger(event:React.MouseEvent<HTMLElement>){
-        this.props.parentCallback(this.state);
-        event.preventDefault()
+
+
+        let selection :string = (window.getSelection() as Selection).toString();
+        if(selection.length <= 0){
+            this.props.parentCallback(this.state);
+            event.preventDefault()
+        }
+
     }
 
 
     render() {
         return (
             <div className={"catalogueItem"} onClick={(event: React.MouseEvent<HTMLElement>) => this.onTrigger(event)}>
-                <img className="catalogueItemImage" onError={this.onImgError.bind(this)} src={this.state.srcImg}/>
+                <img className="catalogueItemImage"
+                     onError={this.onImgError.bind(this)}
+                     src={this.state.srcImg}
+
+                     alt={"returnButton"}
+                />
                 <div className={"catalogueItemName"}> {this.state.name}</div>
             </div>
         )
