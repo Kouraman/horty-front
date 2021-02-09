@@ -5,6 +5,10 @@ import './Catalogue.css';
 import returnImg from './return.png'
 import NavTree from "./NavTree";
 import PlantItem from "./catalogueItem/PlantItem";
+import {IconButton} from "@material-ui/core";
+import FileCopyIcon from "@material-ui/icons/FileCopy";
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import Loader from "react-loader-spinner";
 
 export interface imageApiData{
     id:number,
@@ -75,6 +79,8 @@ export default class Catalogue extends React.Component<any,State> {
         }
     }
     async componentDidMount() {
+
+
         axios.get(this.state.apiUrl)
             .then(res => {
                 this.state.isCatalogueItem?(
@@ -153,13 +159,25 @@ export default class Catalogue extends React.Component<any,State> {
 
     render() {
         if (!this.state.isLoaded) {
-            return "rendering" /* or a loader/spinner */
+            return (
+            <div className="main spinner">
+                <Loader
+                    type="ThreeDots"
+                    color="#00BFFF"
+                    height={100}
+                    width={100}
+                />
+            </div>
+            )
+
         }
 
         return (
-            <div className="">
+            <div className="main">
                 <div className={"catalogueNavigation"}>
-                    <img className={"catalogueReturn " + this.hideReturn()} src={returnImg} alt="" onClick={this.returnEvent.bind(this)}/>
+                    <IconButton className={"iconButton"}>
+                        <ArrowBackIosIcon fontSize="large" onClick={this.returnEvent.bind(this)}/>
+                    </IconButton>
                     <NavTree tree={this.state.navTree} parentCallback = {this.handleCallbackNav}/>
                 </div>
                 <div className="catalogue">

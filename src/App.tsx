@@ -8,10 +8,15 @@ function App({}) {
 
     return (
 
+
         <div>
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
-            </style>
+            <header>
+                {/*<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />*/}
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+                </style>
+            </header>
+
             <Banner/>
             <NavBar/>
 

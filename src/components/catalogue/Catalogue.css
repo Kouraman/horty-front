@@ -17,15 +17,18 @@
 .catalogueNavigation{
 
     display: flex;
-    padding-left: 10%;
 }
 
-.navTree{
-height: 100px;
+.navTree {
+    height: 100px;
     display: flex;
     font-size: 2.5em;
-    padding-left: 5%;
 
+}
+
+.navTree > span {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .navTree a,a:visited{
@@ -34,4 +37,13 @@ height: 100px;
     display: block;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.spinner > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    background-color: white;
+    transform: translateY(200%);
 }

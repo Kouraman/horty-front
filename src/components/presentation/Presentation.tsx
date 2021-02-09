@@ -8,7 +8,7 @@ export default class Presentation extends React.Component {
         const blocks = ["HISTORY","QUALITY","ADVICE"]
 
         return (
-            <div className="presentation">
+            <div className="presentation main">
                 {blocks.map((value, index) => {
                     return <PresentationBlock selector={value} inverted={index % 2 === 1} />
                 })}

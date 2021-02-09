@@ -8,7 +8,7 @@ export default class Home extends React.Component {
 
 
         return (
-            <div className={"home"}>
+            <div className={"main"}>
                 <h1>Bienvenue sur la version de devellopement du site web Brieussel Horticulture!</h1>
                 <p>De nombreuses coquilles, coquillages et coquilettes sont présents. Et c'est normal, je travaille encore dessus!</p>
                 <h4>Le site n'est actuellement pas responsive!!!</h4>

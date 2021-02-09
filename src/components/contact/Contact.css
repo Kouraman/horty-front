@@ -1,0 +1,63 @@
+.contact{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.contactMain{
+    justify-content: space-around;
+    flex-basis: auto;
+
+}
+
+.contactMainData{
+    padding-left: 5em;
+    padding-top: 5%;
+}
+
+.contactMainInfo{
+    width: 40%;
+}
+.contactMainInfo h2{
+    text-align: center;
+}
+
+
+
+.contactMainImg img{
+    width: 100%;
+    max-width: 500px;
+}
+.button{
+    display: flex;
+    align-items: center
+}
+
+.contactPhone{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.contactPhone > div{
+    padding-right: 5%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.contactMarches{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 1 1 0;
+}
+
+.contactMarcheBlock{
+    padding-right: 3%;
+}
+
+.contactMarcheBlock > h3{
+    text-align: center;
+}
+
+.contactMarcheBlock > p{
+    padding-top: 5%;
+}
